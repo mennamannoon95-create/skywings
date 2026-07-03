@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sky Wings</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  background-color: aliceblue;
+}
+
+nav {
+  background-color: black;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+header {
+  padding: 60px;
+  background-image: url(https://images.pexels.com/photos/912050/pexels-photo-912050.jpeg);
+  background-size: cover;
+  color: white;
+}
+
+.offers {
+  padding: 20px;
+  text-align: center;
+}
+
+.offer-card {
+  display: inline-block;
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  width: 150px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.destinations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.dest-item img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#searchBox {
+  padding: 10px;
+  width: 80%;
+  margin: 20px auto;
+  display: block;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+table {
+  width: 90%;
+  margin: 30px auto;
+  background: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid gray;
+}
+
+th {
+  background-color: darkblue;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: lightblue;
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+.book-btn {
+  background-color: darkblue;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.faq {
+  padding: 30px;
+  text-align: right;
+  max-width: 600px;
+  margin: auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 25px;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+.float-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: green;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#home">الرئيسية</a>
+  <a href="#flights">الرحلات</a>
+  <a href="#footer">تواصل معنا</a>
+</nav>
+
+<header>
+  <h1>Sky wings</h1>
+  <p>سافر بسهوله، احجز رحلتك الان</p>
+</header>
+
+<section class="offers">
+  <h2>🔥 أفضل العروض</h2>
+  <div class="offer-card">
+    <h3>دبي</h3>
+    <p><span class="old-price">6000 جنيه</span> 4500 جنيه</p>
+    <p>خصم 25%</p>
+  </div>
+  <div class="offer-card">
+    <h3>إسطنبول</h3>
+    <p><span class="old-price">8000 جنيه</span> 6500 جنيه</p>
+    <p>خصم 19%</p>
+  </div>
+</section>
+
+<section class="destinations">
+  <div class="dest-item">
+    <img src="https://images.pexels.com/photos/162031/dubai-tower-arab-khalifa-162031.jpeg" alt="دبي">
+    <p>دبي</p>
+  </div>
+  <div class="dest-item">
+    <img src="https://images.pexels.com/photos/3299/postcard-vintage-retro-old.jpg" alt="الإسكندرية">
+    <p>الإسكندرية</p>
+  </div>
+  <div class="dest-item">
+    <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" alt="لندن">
+    <p>لندن</p>
+  </div>
+  <div class="dest-item">
+    <img src="https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg" alt="إسطنبول">
+    <p>إسطنبول</p>
+  </div>
+</section>
+
+<h2 id="flights">الرحلات المتاحه</h2>
+
+<input type="text" id="searchBox" placeholder="ابحث عن وجهة...">
+
+<table>
+  <tr>
+    <th>من</th>
+    <th>إلى</th>
+    <th>التاريخ</th>
+    <th>المدة</th>
+    <th>السعر</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>القاهرة</td>
+    <td>🇦🇪 دبي</td>
+    <td>10 يونيو</td>
+    <td>3 ساعات</td>
+    <td>4500 جنيه</td>
+    <td><button class="book-btn">احجز الآن</button></td>
+  </tr>
+  <tr>
+    <td>القاهرة</td>
+    <td>🏖️ الإسكندرية</td>
+    <td>15 يوليو</td>
+    <td>1 ساعة</td>
+    <td>1200 جنيه</td>
+    <td><button class="book-btn">احجز الآن</button></td>
+  </tr>
+  <tr>
+    <td>القاهرة</td>
+    <td>🌊 الغردقة</td>
+    <td>20 يوليو</td>
+    <td>1 ساعة</td>
+    <td>1800 جنيه</td>
+    <td><button class="book-btn">احجز الآن</button></td>
+  </tr>
+  <tr>
+    <td>القاهرة</td>
+    <td>🇬🇧 لندن</td>
+    <td>5 أغسطس</td>
+    <td>5 ساعات</td>
+    <td>12000 جنيه</td>
+    <td><button class="book-btn">احجز الآن</button></td>
+  </tr>
+  <tr>
+    <td>القاهرة</td>
+    <td>🇹🇷 إسطنبول</td>
+    <td>12 أغسطس</td>
+    <td>2 ساعة</td>
+    <td>6500 جنيه</td>
+    <td><button class="book-btn">احجز الآن</button></td>
+  </tr>
+</table>
+
+<section class="faq">
+  <h2>أسئلة متكررة</h2>
+
+  <div class="faq-item">
+    <h3>إزاي أحجز تذكرة؟</h3>
+    <p>اختاري الرحلة المناسبة من الجدول واضغطي "احجز الآن"، وسيتم التواصل معك لتأكيد الحجز.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>هل ينفع أغير تاريخ الرحلة؟</h3>
+    <p>نعم، تواصلي معنا قبل موعد الرحلة بـ 48 ساعة على الأقل.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>إزاي أدفع تمن التذكرة؟</h3>
+    <p>الدفع كاش أو تحويل بنكي، وسيتم توضيح التفاصيل بعد التواصل معك.</p>
+  </div>
+</section>
+
+<footer id="footer">
+  <p>تابعونا على السوشيال ميديا</p>
+  <p>📱 واتساب: 01000000000</p>
+  <p>📷 إنستجرام: @skywings</p>
+  <p>© 2026 Sky Wings - جميع الحقوق محفوظة</p>
+</footer>
+
+<a href="https://wa.me/201000000000" class="float-btn">📞</a>
+
+<script>
+document.querySelectorAll('.book-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    alert('تم الحجز بنجاح! سيتم التواصل معك قريبًا 🎉');
+  });
+});
+
+document.getElementById('searchBox').addEventListener('keyup', function() {
+  var search = this.value.toLowerCase();
+  var rows = document.querySelectorAll('table tr');
+  rows.forEach(function(row, index) {
+    if (index === 0) return;
+    var text = row.textContent.toLowerCase();
+    row.style.display = text.includes(search) ? '' : 'none';
+  });
+});
+</script>
+
+</body>
+</html>
